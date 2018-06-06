@@ -33,7 +33,7 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">INRA MISTEA
 Copyright © - INRA - 2014 - 2018
-The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)</Literal>
+The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by-sa/4.0/legalcode)</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="#EarInflorescence"/>
@@ -1718,6 +1718,11 @@ Peut définir une zone au sens physique ou théorique</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>#Experiment</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EMPHASIS ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Experiment</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sko:exactMatch &lt;brapi/v1/studies&gt;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

@@ -18,14 +18,14 @@
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Anne Tireau, Llorenç Cabrera-Bosquet, Pascal Neveu (INRA Montpellier)</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Version 3.0 (2018-04-14) created by INRA - MISTEA - LEPSE</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">INRA MISTEA
 Copyright © - INRA - 2014 - 2018
-The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Version 3.0 (2018-04-14) created by INRA - MISTEA - LEPSE</Literal>
+The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by-sa/4.0/legalcode)</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

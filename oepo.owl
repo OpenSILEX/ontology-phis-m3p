@@ -9,6 +9,7 @@
     <Prefix name="" IRI="http://www.phenome-fppn.fr/vocabulary/2018/oepo"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="ns" IRI="http://creativecommons.org/ns#"/>
+    <Prefix name="geo" IRI="http://www.opengis.net/ont/geosparql#"/>
     <Prefix name="obo" IRI="http://purl.obolibrary.org/obo/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -16,6 +17,7 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="sxml" IRI="https://www.w3.org/TR/xmlschema-2#"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -27,7 +29,7 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Version 3.0.1 (2018-05-27) created by INRA - MISTEA - LEPSE</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Version 3.0.2 (2018-06-25) created by INRA - MISTEA - LEPSE</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -171,6 +173,9 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
         <ObjectProperty IRI="#hasSpecies"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#FiberGlassBlock"/>
     </Declaration>
     <Declaration>
@@ -270,6 +275,9 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
         <Class IRI="#Area"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="sxml:rf-minInclusive"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:author"/>
     </Declaration>
     <Declaration>
@@ -318,6 +326,9 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
         <Class IRI="#Lightning"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="sxml:rf-maxInclusive"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
     </Declaration>
     <Declaration>
@@ -343,6 +354,9 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     </Declaration>
     <Declaration>
         <Class IRI="#HorizontalScreen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="geo:sfContains"/>
     </Declaration>
     <Declaration>
         <Class IRI="#EuropeanInfrastructure"/>
@@ -1752,7 +1766,7 @@ Peut définir une zone au sens physique ou théorique</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ExperimentalCondition</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Context expérimental</Literal>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Condition expérimentale</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2850,6 +2864,11 @@ Peut définir une zone au sens physique ou théorique</Literal>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.opengis.net/ont/geosparql#hasGeometry</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>#hasGeometry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasInitialPosition</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Initial position</Literal>
@@ -3125,9 +3144,19 @@ Peut définir une zone au sens physique ou théorique</Literal>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">skos:exactMatch &lt;https://www.w3.org/TR/xmlschema-2/#rf-maxInclusive&gt;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>#maxInclusive</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>#minInclusive</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">skos:exactMatch https://www.w3.org/TR/xmlschema-2/#rf-minInclusive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>#minInclusive</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -3148,6 +3177,11 @@ Peut définir une zone au sens physique ou théorique</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>#sfContains</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.opengis.net/ont/geosparql#sfContains</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>#sfContains</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
